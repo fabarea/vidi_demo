@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-07-25T13:30:13Z" product-name="ebook">
+		<header/>
+		<body>
+			<trans-unit id="mlang_labels_tablabel">
+				<source>Books</source>
+			</trans-unit>
+			<trans-unit id="mlang_tabs_tab" xml:space="preserve">
+				<source>Books</source>
+			</trans-unit>
+			<trans-unit id="mlang_labels_tabdescr" xml:space="preserve">
+				<source>Module for managing Books</source>
+			</trans-unit>
+			<trans-unit id="uid">
+				<source>uid</source>
+			</trans-unit>
+
+			<trans-unit id="tabs.details">
+				<source>Book details</source>
+			</trans-unit>
+			<trans-unit id="tabs.codes">
+				<source>Book codes</source>
+			</trans-unit>
+			<trans-unit id="addFileReference">
+				<source>Add reference to eBook file</source>
+			</trans-unit>
+
+			<trans-unit id="book">
+				<source>Book</source>
+			</trans-unit>
+			<trans-unit id="title">
+				<source>Book title</source>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="author">
+				<source>Author</source>
+			</trans-unit>
+			<trans-unit id="language">
+				<source>Language</source>
+			</trans-unit>
+			<trans-unit id="language.item.blindtext">
+				<source>-- Please select --</source>
+			</trans-unit>
+			<trans-unit id="language.item.english">
+				<source>English</source>
+			</trans-unit>
+			<trans-unit id="language.item.german">
+				<source>German</source>
+			</trans-unit>
+			<trans-unit id="language.item.french">
+				<source>French</source>
+			</trans-unit>
+			<trans-unit id="publisher">
+				<source>Publisher</source>
+			</trans-unit>
+			<trans-unit id="publisher.item.blindtext">
+				<source>-- Please select --</source>
+			</trans-unit>
+			<trans-unit id="access_codes">
+				<source>Access Codes</source>
+			</trans-unit>
+			<trans-unit id="files">
+				<source>Files</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

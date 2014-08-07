@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/TYPO3/CMS/Vidi/ViewHelpers">
+
+<f:layout name="default"/>
+
+<f:section name="main">
+
+	<f:if condition="{v:content.find(matches: '{usergroup: 1}', dataType: 'fe_users')}">
+		<ul>
+			<f:for each="{v:content.find(selection: 1)}"
+			       as="user">
+				<li>
+					{user.uid} - {user.username}
+					<f:if condition="{user.usergroup}">
+						<ul>
+							<f:for each="{user.usergroup}" as="group">
+								<li>{group.uid} - {group.title}</li>
+							</f:for>
+						</ul>
+					</f:if>
+				</li>
+			</f:for>
+		</ul>
+	</f:if>
+
+</f:section>
+
+</html>

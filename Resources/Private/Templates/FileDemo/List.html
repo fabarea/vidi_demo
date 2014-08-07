@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/TYPO3/CMS/Vidi/ViewHelpers"
+      xmlns:m="http://typo3.org/ns/TYPO3/CMS/Media/ViewHelpers">
+
+<f:layout name="Default"/>
+
+<f:section name="main">
+
+	<span style="text-decoration: underline">Number of files</span>:
+	{v:content.count(matches: '{storage: 1, extension: \'png\'}', dataType: 'sys_file')}
+
+	<f:if condition="{v:content.find(matches: '{storage: 1, extension: \'png\'}', orderings: '{uid: \'ASC\'}', dataType: 'sys_file')}">
+		<ul>
+			<f:for each="{v:content.find(matches: '{storage: 1, extension: \'png\'}', orderings: '{uid: \'ASC\'}', dataType: 'sys_file')}"
+			       as="file">
+				<li>
+					{file.uid}:{file.identifier} - <strong>{file.metadata.title}</strong>
+
+					<m:thumbnail fileIdentifier="{file.identifier}" storage="1"/>
+
+					<f:if condition="{file.metadata.categories}}">
+						<ul>
+							<f:for each="{file.metadata.categories}" as="category">
+								<li>{category.title}</li>
+							</f:for>
+						</ul>
+					</f:if>
+				</li>
+			</f:for>
+		</ul>
+	</f:if>
+
+</f:section>
+</html>

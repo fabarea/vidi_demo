@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-07-25T13:30:13Z" product-name="ebook">
+		<header/>
+		<body>
+			<trans-unit id="mlang_labels_tablabel">
+				<source>Access Codes</source>
+			</trans-unit>
+			<trans-unit id="mlang_tabs_tab" xml:space="preserve">
+				<source>Access Codes</source>
+			</trans-unit>
+			<trans-unit id="mlang_labels_tabdescr" xml:space="preserve">
+				<source>Module for managing Access Codes</source>
+			</trans-unit>
+			<trans-unit id="uid">
+				<source>uid</source>
+			</trans-unit>
+
+			<trans-unit id="access_code">
+				<source>Access Code</source>
+			</trans-unit>
+			<trans-unit id="code">
+				<source>Code</source>
+			</trans-unit>
+			<trans-unit id="book">
+				<source>Book</source>
+			</trans-unit>
+			<trans-unit id="total_downloads">
+				<source>Download Limit</source>
+			</trans-unit>
+			<trans-unit id="used_downloads">
+				<source>Used downloads</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

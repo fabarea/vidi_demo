@@ -1,0 +1,50 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:quick_demo/Resources/Private/Language/flexform.xlf:tab.general</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<switchableControllerActions>
+						<TCEforms>
+							<label>LLL:EXT:quick_demo/Resources/Private/Language/flexform.xlf:action</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:quick_demo/Resources/Private/Language/flexform.xlf:list</numIndex>
+										<numIndex index="1">UserDemo->list;UserDemo->edit;UserDemo->update;</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</switchableControllerActions>
+
+					<settings.book.downloadPid>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>Download pid</label>
+							<displayCond>FIELD:switchableControllerActions:=:DemoUser->show;DemoUser->unlock</displayCond>
+							<onChange>reload</onChange>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</settings.book.downloadPid>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

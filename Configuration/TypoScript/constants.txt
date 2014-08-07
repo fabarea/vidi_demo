@@ -1,0 +1,34 @@
+plugin.tx_quickdemo {
+	view {
+		# cat=plugin.tx_quickdemo/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:quick_demo/Resources/Private/Templates/
+		# cat=plugin.tx_quickdemo/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:quick_demo/Resources/Private/Partials/
+		# cat=plugin.tx_quickdemo/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:quick_demo/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_quickdemo//a; type=string; label=Default storage PID
+		storagePid = 33
+	}
+	settings {
+		fileSizeWarningLimit = 5242880
+		## Required for "Learn more/Erfahren Sie mehr" link of EXT:quick_demo Book/Show.html template
+		# cat=plugin.tx_quickdemo//settings; type=string; label=Page ID which contains the FAQ.
+		faqPid = 89
+		book {
+			detailPid = 6
+		}
+	}
+}
+
+#module.tx_quickdemo {
+#	view {
+#		 # cat=module.tx_quickdemo/file; type=string; label=Path to template root (BE)
+#		templateRootPath = EXT:quick_demo/Resources/Private/Backend/Templates/
+#		 # cat=module.tx_quickdemo/file; type=string; label=Path to template partials (BE)
+#		partialRootPath = EXT:quick_demo/Resources/Private/Partials/
+#		 # cat=module.tx_quickdemo/file; type=string; label=Path to template layouts (BE)
+#		layoutRootPath = EXT:quick_demo/Resources/Private/Backend/Layouts/
+#	}
+#}

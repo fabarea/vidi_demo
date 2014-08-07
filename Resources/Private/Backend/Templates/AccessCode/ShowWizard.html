@@ -1,0 +1,185 @@
+<div class="control-group" style="margin-bottom: 20px">
+	<label class="control-label" for="toggle-create-many-or-one"></label>
+
+	<div class="controls">
+		<select id="toggle-create-many-or-one">
+			<option value="createMultiple">
+				<f:translate key="tx_quickdemo.accesscode-wizard.create-many"/>
+			</option>
+			<option value="create">
+				<f:translate key="tx_quickdemo.accesscode-wizard.create-one"/>
+			</option>
+		</select>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+
+	// short-hand version
+	(function ($) {
+		$(function () {
+
+			// Toggle create fields
+			$('#toggle-create-many-or-one').change(function () {
+				$('#form-create-code').toggleClass('hidden');
+				$('#form-create-multiple-codes').toggleClass('hidden');
+
+				$('.btn-create-code').toggleClass('hidden')
+				$('.btn-create-multiple-codes').toggleClass('hidden')
+			});
+
+			// Validate given book code (has to be unique)
+			$('.btn-create-code').addClass('disabled');
+
+			// @todo add short timer before sending ajax request.
+			$('#newAccessCodeCode').keyup(function () {
+				var jqxhr,
+					code = $('#newAccessCodeCode').val();
+
+				if (code.length === 0) {
+					return false;
+				}
+
+				// Reset validation state
+				$('.has-validation').removeClass('error');
+				$('.code-error-message').addClass('hidden');
+
+				// Display spinner to tell the User something is happening.
+				$('.icon-loading').removeClass('hidden');
+
+				jqxhr = $.ajax({
+					type: 'POST',
+					url: '/typo3/ajax.php',
+					dataType: 'json',
+					data: {
+						ajaxID: 'vidiAjaxDispatcher',
+						extensionName: 'ebook',
+						pluginName: 'Pi1',
+						controllerName: 'AccessCode',
+						actionName: 'validateCode',
+						arguments: {
+							code: code
+						}
+					}
+				});
+				jqxhr.done(function (data) {
+					if (data.result === false) {
+						// we have a dup!
+						$('.btn-create-code').addClass('disabled');
+						$('.has-validation').addClass('error');
+						$('.code-error-message').removeClass('hidden');
+					} else {
+						$('.btn-create-code').removeClass('disabled');
+					}
+
+					// Hide spinner
+					$('.icon-loading').addClass('hidden');
+				});
+				jqxhr.fail(function (data) {
+					alert('Something went wrong! Check out console log for more detail');
+					console.log(data);
+					$('.btn-create-code').removeClass('disabled');
+				});
+			});
+		});
+	})(jQuery);
+</script>
+
+<!-- ----------- -->
+<!-- CREATE MANY -->
+<!-- ----------- -->
+<form action="/typo3/ajax.php" id="form-create-multiple-codes" method="post">
+
+	<!-- required field for BE Ajax call -->
+	<input type="hidden" name="ajaxID" value="vidiAjaxDispatcher"/>
+	<input type="hidden" name="extensionName" value="ebook"/>
+	<input type="hidden" name="pluginName" value="Pi1"/>
+	<input type="hidden" name="controllerName" value="AccessCode"/>
+	<input type="hidden" name="actionName" value="createMultiple" />
+
+	<!-- additional arguments -->
+	<input type="hidden" name="arguments[book]" value="{book.uid}"/>
+
+	<div class="control-group create-many">
+		<label class="control-label" for="quantity">
+			<f:translate key="tx_quickdemo.accesscode-wizard.number-of-codes"/>
+		</label>
+
+		<div class="controls">
+			<input type="text" id="quantity" name="arguments[quantity]" value="" placeholder="">
+		</div>
+	</div>
+
+	<div class="control-group create-many">
+		<label class="control-label" for="totalDownloads">
+			<f:translate key="tx_quickdemo.accesscode-wizard.download-limit"/>
+		</label>
+
+		<div class="controls">
+			<input type="text" id="totalDownloads" name="arguments[totalDownloads]" value="" placeholder="">
+		</div>
+
+	</div>
+
+	<div class="control-group create-many">
+		<label class="control-label" for="prefix">
+			<f:translate key="tx_quickdemo.accesscode-wizard.code-prefix"/>
+		</label>
+
+		<div class="controls">
+			<input type="text" id="prefix" name="arguments[prefix]" value="" placeholder="">
+		</div>
+	</div>
+
+	<!-- HIDDEN SUBMIT BUTTON -->
+	<input type="submit" style="visibility: hidden; height: 1px">
+
+</form>
+
+<!-- ---------- -->
+<!-- CREATE ONE -->
+<!-- ---------- -->
+<form action="/typo3/ajax.php" id="form-create-code" method="post" class="hidden">
+
+	<!-- required field for BE Ajax call -->
+	<input type="hidden" name="ajaxID" value="vidiAjaxDispatcher"/>
+	<input type="hidden" name="extensionName" value="ebook"/>
+	<input type="hidden" name="pluginName" value="Pi1"/>
+	<input type="hidden" name="controllerName" value="AccessCode"/>
+	<input type="hidden" name="actionName" value="create" />
+
+	<!-- additional arguments -->
+	<input type="hidden" name="arguments[book]" value="{book.uid}"/>
+
+
+	<div class="has-validation control-group create-one">
+		<label class="control-label" for="newAccessCodeCode">
+			<f:translate key="tx_quickdemo.accesscode-wizard.code-suggestion"/>
+		</label>
+
+		<div class="controls">
+			<input type="text" id="newAccessCodeCode" name="arguments[code]" placeholder="">
+			<img src="{v:publicPath()}Resources/Public/Images/loading.gif" width="16" height="" alt=""
+			     class="icon-loading hidden"/>
+			<span class="code-error-message help-block hidden">
+				<f:translate key="tx_quickdemo.accesscode-wizard.code-duplicate"/>
+			</span>
+		</div>
+	</div>
+
+	<div class="control-group create-one">
+		<label class="control-label" for="downloadLimit">
+			<f:translate key="tx_quickdemo.accesscode-wizard.download-limit"/>
+		</label>
+
+		<div class="controls">
+			<input type="text" id="downloadLimit" name="arguments[downloadLimit]" value="" placeholder="">
+		</div>
+	</div>
+
+	<!-- HIDDEN SUBMIT BUTTON -->
+	<input type="submit" style="visibility: hidden; height: 1px">
+
+</form>
+{namespace v=TYPO3\CMS\Vidi\ViewHelpers}
