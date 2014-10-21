@@ -271,8 +271,8 @@ return array(
 						array(
 							'labelSingular' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_accesscode.xlf:access_code',
 							'labelPlural' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:access_codes',
-							'sourceModule' => 'ebook_VidiTxEbookDomainModelBookM1',
-							'targetModule' => 'ebook_VidiTxEbookDomainModelAccesscodeM1',
+							'sourceModule' => 'ebook_VidiTxQuickdemoDomainModelBookM1',
+							'targetModule' => 'ebook_VidiTxQuickdemoDomainModelAccesscodeM1',
 						)
 					),
 				),
