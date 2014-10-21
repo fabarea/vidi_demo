@@ -125,6 +125,10 @@ return array(
 		),
 	),
 	'grid' => array(
+		'facets' => array(
+			'uid',
+			'book',
+		),
 		'columns' => array(
 			'__checkbox' => array(
 				'renderer' => new \TYPO3\CMS\Vidi\Grid\CheckBoxComponent(),
