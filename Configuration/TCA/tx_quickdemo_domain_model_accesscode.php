@@ -127,9 +127,7 @@ return array(
 	'grid' => array(
 		'columns' => array(
 			'__checkbox' => array(
-				'width' => '5px',
-				'sortable' => FALSE,
-				'html' => '<input type="checkbox" class="checkbox-row-top"/>',
+				'renderer' => new \TYPO3\CMS\Vidi\Grid\CheckBoxComponent(),
 			),
 			'uid' => array(
 				'visible' => FALSE,
@@ -151,8 +149,7 @@ return array(
 				'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_accesscode.xlf:used_downloads',
 			),
 			'__buttons' => array(
-				'sortable' => FALSE,
-				'width' => '70px',
+				'renderer' => new \TYPO3\CMS\Vidi\Grid\ButtonGroupComponent(),
 			),
 		),
 	),
