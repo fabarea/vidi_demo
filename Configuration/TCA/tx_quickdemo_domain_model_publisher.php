@@ -5,7 +5,7 @@ if (!defined ('TYPO3_MODE')) {
 
 return array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_publisher.xlf:publisher',
+		'title'	=> 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_publisher.xlf:publisher',
 		'label' => 'name',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -26,7 +26,7 @@ return array(
 		),
 		'searchFields' => 'name',
 		'typeicon_classes' => array(
-			'default' => 'extensions-quick_demo-publisher',
+			'default' => 'extensions-vidi_demo-publisher',
 		),
 	),
 	'types' => array(
@@ -59,8 +59,8 @@ return array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_quickdemo_domain_model_publisher',
-				'foreign_table_where' => 'AND tx_quickdemo_domain_model_publisher.pid=###CURRENT_PID### AND tx_quickdemo_domain_model_publisher.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_vididemo_domain_model_publisher',
+				'foreign_table_where' => 'AND tx_vididemo_domain_model_publisher.pid=###CURRENT_PID### AND tx_vididemo_domain_model_publisher.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -87,7 +87,7 @@ return array(
 		),
 		'name' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_publisher.xlf:name',
+			'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_publisher.xlf:name',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,

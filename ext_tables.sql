@@ -1,7 +1,7 @@
 #
-# Table structure for table 'tx_quickdemo_domain_model_publisher'
+# Table structure for table 'tx_vididemo_domain_model_publisher'
 #
-CREATE TABLE tx_quickdemo_domain_model_publisher (
+CREATE TABLE tx_vididemo_domain_model_publisher (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -37,9 +37,9 @@ CREATE TABLE tx_quickdemo_domain_model_publisher (
 );
 
 #
-# Table structure for table 'tx_quickdemo_domain_model_book'
+# Table structure for table 'tx_vididemo_domain_model_book'
 #
-CREATE TABLE tx_quickdemo_domain_model_book (
+CREATE TABLE tx_vididemo_domain_model_book (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -84,9 +84,9 @@ CREATE TABLE tx_quickdemo_domain_model_book (
 );
 
 #
-# Table structure for table 'tx_quickdemo_domain_model_accesscode'
+# Table structure for table 'tx_vididemo_domain_model_accesscode'
 #
-CREATE TABLE tx_quickdemo_domain_model_accesscode (
+CREATE TABLE tx_vididemo_domain_model_accesscode (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -127,9 +127,9 @@ CREATE TABLE tx_quickdemo_domain_model_accesscode (
 );
 
 #
-# Table structure for table 'tx_quickdemo_domain_model_accesslog'
+# Table structure for table 'tx_vididemo_domain_model_accesslog'
 #
-CREATE TABLE tx_quickdemo_domain_model_accesslog (
+CREATE TABLE tx_vididemo_domain_model_accesslog (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,

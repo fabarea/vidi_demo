@@ -6,19 +6,19 @@
 		<sDEF>
 			<ROOT>
 				<TCEforms>
-					<sheetTitle>LLL:EXT:quick_demo/Resources/Private/Language/flexform.xlf:tab.general</sheetTitle>
+					<sheetTitle>LLL:EXT:vidi_demo/Resources/Private/Language/flexform.xlf:tab.general</sheetTitle>
 				</TCEforms>
 				<type>array</type>
 				<el>
 					<switchableControllerActions>
 						<TCEforms>
-							<label>LLL:EXT:quick_demo/Resources/Private/Language/flexform.xlf:action</label>
+							<label>LLL:EXT:vidi_demo/Resources/Private/Language/flexform.xlf:action</label>
 							<onChange>reload</onChange>
 							<config>
 								<type>select</type>
 								<items>
 									<numIndex index="0">
-										<numIndex index="0">LLL:EXT:quick_demo/Resources/Private/Language/flexform.xlf:list</numIndex>
+										<numIndex index="0">LLL:EXT:vidi_demo/Resources/Private/Language/flexform.xlf:list</numIndex>
 										<numIndex index="1">FileDemo->list;FileDemo->edit;FileDemo->update;</numIndex>
 									</numIndex>
 								</items>

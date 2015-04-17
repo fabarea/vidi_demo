@@ -1,5 +1,5 @@
 <?php
-namespace Fab\QuickDemo\Controller;
+namespace Fab\VidiDemo\Controller;
 
 /**
  * This file is part of the TYPO3 CMS project.

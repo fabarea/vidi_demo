@@ -1,32 +1,32 @@
-plugin.tx_quickdemo {
+plugin.tx_vididemo {
 	view {
-		templateRootPath = {$plugin.tx_quickdemo.view.templateRootPath}
-		partialRootPath = {$plugin.tx_quickdemo.view.partialRootPath}
-		layoutRootPath = {$plugin.tx_quickdemo.view.layoutRootPath}
+		templateRootPath = {$plugin.tx_vididemo.view.templateRootPath}
+		partialRootPath = {$plugin.tx_vididemo.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_vididemo.view.layoutRootPath}
 	}
 	persistence {
-		storagePid = {$plugin.tx_quickdemo.persistence.storagePid}
+		storagePid = {$plugin.tx_vididemo.persistence.storagePid}
 		recursive = 99
 	}
 	features {
 		rewrittenPropertyMapper = 1
 	}
 	settings {
-		storagePid = {$plugin.tx_quickdemo.persistence.storagePid}
-		fileSizeWarningLimit = {$plugin.tx_quickdemo.settings.fileSizeWarningLimit}
-		faqPid = {$plugin.tx_quickdemo.settings.faqPid}
+		storagePid = {$plugin.tx_vididemo.persistence.storagePid}
+		fileSizeWarningLimit = {$plugin.tx_vididemo.settings.fileSizeWarningLimit}
+		faqPid = {$plugin.tx_vididemo.settings.faqPid}
 		book {
-			detailPid = {$plugin.tx_quickdemo.settings.book.detailPid}
+			detailPid = {$plugin.tx_vididemo.settings.book.detailPid}
 		}
 	}
 }
 
 
 # Module configuration
-#module.tx_quickdemo {
+#module.tx_vididemo {
 #	view {
-#		templateRootPath = {$module.tx_quickdemo.view.templateRootPath}
-#		partialRootPath = {$module.tx_quickdemo.view.partialRootPath}
-#		layoutRootPath = {$module.tx_quickdemo.view.layoutRootPath}
+#		templateRootPath = {$module.tx_vididemo.view.templateRootPath}
+#		partialRootPath = {$module.tx_vididemo.view.partialRootPath}
+#		layoutRootPath = {$module.tx_vididemo.view.layoutRootPath}
 #	}
 #}

@@ -1,1 +1,1 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:quick_demo/Configuration/TypoScript/setup.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:vidi_demo/Configuration/TypoScript/setup.ts">

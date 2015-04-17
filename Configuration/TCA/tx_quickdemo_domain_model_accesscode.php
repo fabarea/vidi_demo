@@ -5,7 +5,7 @@ if (!defined ('TYPO3_MODE')) {
 
 return array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_accesscode.xlf:access_code',
+		'title'	=> 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_accesscode.xlf:access_code',
 		'label' => 'code',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -27,7 +27,7 @@ return array(
 		#'hideTable' => TRUE,
 		'searchFields' => 'code',
 		'typeicon_classes' => array(
-			'default' => 'extensions-quick_demo-access_code',
+			'default' => 'extensions-vidi_demo-access_code',
 		),
 	),
 	'types' => array(
@@ -58,8 +58,8 @@ return array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_quickdemo_domain_model_accesscode',
-				'foreign_table_where' => 'AND tx_quickdemo_domain_model_accesscode.pid=###CURRENT_PID### AND tx_quickdemo_domain_model_accesscode.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_vididemo_domain_model_accesscode',
+				'foreign_table_where' => 'AND tx_vididemo_domain_model_accesscode.pid=###CURRENT_PID### AND tx_vididemo_domain_model_accesscode.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -85,7 +85,7 @@ return array(
 		),
 		'code' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_accesscode.xlf:code',
+			'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_accesscode.xlf:code',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -94,7 +94,7 @@ return array(
 		),
 		'total_downloads' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_accesscode.xlf:total_downloads',
+			'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_accesscode.xlf:total_downloads',
 			'config' => array(
 				'type' => 'input',
 				'size' => 4,
@@ -104,7 +104,7 @@ return array(
 		),
 		'used_downloads' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_accesscode.xlf:used_downloads',
+			'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_accesscode.xlf:used_downloads',
 			'config' => array(
 				'type' => 'input',
 				'size' => 4,
@@ -114,10 +114,10 @@ return array(
 		),
 		'book' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_accesscode.xlf:book',
+			'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_accesscode.xlf:book',
 			'config' => array(
 				'type' => 'select',
-				'foreign_table' => 'tx_quickdemo_domain_model_book',
+				'foreign_table' => 'tx_vididemo_domain_model_book',
 				'foreign_field' => 'access_codes',
 				'minitems' => 1,
 				'maxitems' => 1,
@@ -146,11 +146,11 @@ return array(
 			),
 			'total_downloads' => array(
 				'visible' => TRUE,
-				'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_accesscode.xlf:total_downloads',
+				'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_accesscode.xlf:total_downloads',
 			),
 			'used_downloads' => array(
 				'visible' => TRUE,
-				'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_accesscode.xlf:used_downloads',
+				'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_accesscode.xlf:used_downloads',
 			),
 			'__buttons' => array(
 				'renderer' => new \TYPO3\CMS\Vidi\Grid\ButtonGroupComponent(),

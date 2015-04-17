@@ -1,12 +1,11 @@
 {
-	"name": "fab/quick-demo",
+	"name": "fab/vidi-demo",
 	"type": "typo3-cms-extension",
 	"description": "Quick demo to illustrate various features of Vidi.",
-	"homepage": "https://github.com/fudriot/quick_demo",
+	"homepage": "https://github.com/fabarea/vidi_demo",
 	"license": ["GPL-2.0+"],
 	"keywords": ["TYPO3 CMS", "vidi", "Quick Demo"],
 	"support": {
-		"issues": "https://github.com/fudriot/quick_demo/issues"
-	},
-	"version": "1.0.0-dev"
+		"issues": "https://github.com/fabarea/vidi_demo/issues"
+	}
 }

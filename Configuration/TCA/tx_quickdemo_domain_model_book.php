@@ -5,7 +5,7 @@ if (!defined ('TYPO3_MODE')) {
 
 return array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:book',
+		'title'	=> 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:book',
 		'label' => 'title',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -28,14 +28,14 @@ return array(
 		),
 		'searchFields' => 'title,description,author,access_codes,publisher',
 		'typeicon_classes' => array(
-			'default' => 'extensions-quick_demo-book',
+			'default' => 'extensions-vidi_demo-book',
 		),
 	),
 	'types' => array(
 		'1' => array('showitem' => '
-			--div--;LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:tabs.details, hidden;;1,
-				--palette--;LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:palette.title;title, files, language, publisher, description,
-			--div--;LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:tabs.codes, access_codes'
+			--div--;LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:tabs.details, hidden;;1,
+				--palette--;LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:palette.title;title, files, language, publisher, description,
+			--div--;LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:tabs.codes, access_codes'
 		),
 	),
 	'palettes' => array(
@@ -65,8 +65,8 @@ return array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_quickdemo_domain_model_book',
-				'foreign_table_where' => 'AND tx_quickdemo_domain_model_book.pid=###CURRENT_PID### AND tx_quickdemo_domain_model_book.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_vididemo_domain_model_book',
+				'foreign_table_where' => 'AND tx_vididemo_domain_model_book.pid=###CURRENT_PID### AND tx_vididemo_domain_model_book.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -125,7 +125,7 @@ return array(
 		),
 		'title' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:title',
+			'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:title',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -134,7 +134,7 @@ return array(
 		),
 		'description' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:description',
+			'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:description',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
@@ -155,7 +155,7 @@ return array(
 		),
 		'author' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:author',
+			'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:author',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 30,
@@ -164,14 +164,14 @@ return array(
 		),
 		'language' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:language',
+			'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:language',
 			'config' => array(
 				'type' => 'select',
 				'items' => array(
-					array('LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:language.item.blindtext', ''),
-					array('LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:language.item.english', 1),
-					array('LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:language.item.german', 2),
-					array('LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:language.item.french', 2),
+					array('LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:language.item.blindtext', ''),
+					array('LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:language.item.english', 1),
+					array('LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:language.item.german', 2),
+					array('LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:language.item.french', 2),
 				),
 				'size' => 1,
 				'maxitems' => 1,
@@ -180,24 +180,24 @@ return array(
 		),
 		'publisher' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:publisher',
+			'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:publisher',
 			'config' => array(
 				'type' => 'select',
 				'items' => array(
-					array('LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:publisher.item.blindtext', 0),
+					array('LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:publisher.item.blindtext', 0),
 				),
-				'foreign_table' => 'tx_quickdemo_domain_model_publisher',
-				#'foreign_table_where' => 'AND tx_quickdemo_domain_model_publisher.pid=###STORAGE_PID###',
+				'foreign_table' => 'tx_vididemo_domain_model_publisher',
+				#'foreign_table_where' => 'AND tx_vididemo_domain_model_publisher.pid=###STORAGE_PID###',
 				'minitems' => 1,
 				'maxitems' => 1,
 			),
 		),
 		'access_codes' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:access_codes',
+			'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:access_codes',
 			'config' => array(
 				'type' => 'inline',
-				'foreign_table' => 'tx_quickdemo_domain_model_accesscode',
+				'foreign_table' => 'tx_vididemo_domain_model_accesscode',
 				'foreign_field' => 'book',
 				'maxitems'      => 9999,
 				'appearance' => array(
@@ -217,7 +217,7 @@ return array(
 		),
 		'files' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:files',
+			'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:files',
 			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
 				'files',
 				array(
@@ -235,7 +235,7 @@ return array(
 							'delete' => TRUE,
 							'localize' => FALSE,
 						),
-						'createNewRelationLinkTitle' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:addFileReference',
+						'createNewRelationLinkTitle' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:addFileReference',
 					),
 				),
 				$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
@@ -269,10 +269,10 @@ return array(
 					new TYPO3\CMS\Vidi\Grid\GenericRendererComponent(
 						'TYPO3\CMS\Vidi\Grid\RelationCountRenderer',
 						array(
-							'labelSingular' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_accesscode.xlf:access_code',
-							'labelPlural' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_book.xlf:access_codes',
-							'sourceModule' => 'ebook_VidiTxQuickdemoDomainModelBookM1',
-							'targetModule' => 'ebook_VidiTxQuickdemoDomainModelAccesscodeM1',
+							'labelSingular' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_accesscode.xlf:access_code',
+							'labelPlural' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:access_codes',
+							'sourceModule' => 'ebook_VidiTxVididemoDomainModelBookM1',
+							'targetModule' => 'ebook_VidiTxVididemoDomainModelAccesscodeM1',
 						)
 					),
 				),

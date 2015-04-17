@@ -5,7 +5,7 @@ if (!defined ('TYPO3_MODE')) {
 
 return array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_accesslog.xlf:access_log',
+		'title'	=> 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_accesslog.xlf:access_log',
 		'label' => 'code',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -19,7 +19,7 @@ return array(
 		#'hideTable' => TRUE,
 		'searchFields' => 'code,book,file,device',
 		'typeicon_classes' => array(
-			'default' => 'extensions-quick_demo-access_log',
+			'default' => 'extensions-vidi_demo-access_log',
 		),
 	),
 	'interface' => array(
@@ -35,7 +35,7 @@ return array(
 
 		'code' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_accesslog.xlf:code',
+			'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_accesslog.xlf:code',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -45,7 +45,7 @@ return array(
 		),
 		'book' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_accesslog.xlf:book',
+			'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_accesslog.xlf:book',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -55,7 +55,7 @@ return array(
 		),
 		'file' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_accesslog.xlf:file',
+			'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_accesslog.xlf:file',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -65,7 +65,7 @@ return array(
 		),
 		'device' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_accesslog.xlf:device',
+			'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_accesslog.xlf:device',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -75,7 +75,7 @@ return array(
 		),
 		'crdate' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:quick_demo/Resources/Private/Language/tx_quickdemo_domain_model_accesslog.xlf:crdate',
+			'label' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_accesslog.xlf:crdate',
 			'config' => array(
 				'type' => 'input',
 				'size' => 13,

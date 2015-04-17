@@ -1,5 +1,5 @@
 <?php
-namespace Fab\QuickDemo\Domain\Model;
+namespace Fab\VidiDemo\Domain\Model;
 
 /**
  * This file is part of the TYPO3 CMS project.
@@ -52,21 +52,21 @@ class Book extends AbstractEntity {
 	/**
 	 * Publisher
 	 *
-	 * @var \Fab\QuickDemo\Domain\Model\Publisher
+	 * @var \Fab\VidiDemo\Domain\Model\Publisher
 	 */
 	protected $publisher = NULL;
 
 	/**
 	 * Access Codes
 	 *
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fab\QuickDemo\Domain\Model\AccessCode>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fab\VidiDemo\Domain\Model\AccessCode>
 	 */
 	protected $accessCodes = NULL;
 
 	/**
 	 * Files
 	 *
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fab\QuickDemo\Domain\Model\File>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fab\VidiDemo\Domain\Model\File>
 	 */
 	protected $files = NULL;
 
@@ -174,7 +174,7 @@ class Book extends AbstractEntity {
 	/**
 	 * Returns the publisher
 	 *
-	 * @return \Fab\QuickDemo\Domain\Model\Publisher $publisher
+	 * @return \Fab\VidiDemo\Domain\Model\Publisher $publisher
 	 */
 	public function getPublisher() {
 		return $this->publisher;
@@ -183,37 +183,37 @@ class Book extends AbstractEntity {
 	/**
 	 * Sets the publisher
 	 *
-	 * @param \Fab\QuickDemo\Domain\Model\Publisher $publisher
+	 * @param \Fab\VidiDemo\Domain\Model\Publisher $publisher
 	 * @return void
 	 */
-	public function setPublisher(\Fab\QuickDemo\Domain\Model\Publisher $publisher) {
+	public function setPublisher(\Fab\VidiDemo\Domain\Model\Publisher $publisher) {
 		$this->publisher = $publisher;
 	}
 
 	/**
 	 * Adds an AccessCode
 	 *
-	 * @param \Fab\QuickDemo\Domain\Model\AccessCode $accessCode
+	 * @param \Fab\VidiDemo\Domain\Model\AccessCode $accessCode
 	 * @return void
 	 */
-	public function addAccessCode(\Fab\QuickDemo\Domain\Model\AccessCode $accessCode) {
+	public function addAccessCode(\Fab\VidiDemo\Domain\Model\AccessCode $accessCode) {
 		$this->accessCodes->attach($accessCode);
 	}
 
 	/**
 	 * Removes an AccessCode
 	 *
-	 * @param \Fab\QuickDemo\Domain\Model\AccessCode $accessCodeToRemove The AccessCode to be removed
+	 * @param \Fab\VidiDemo\Domain\Model\AccessCode $accessCodeToRemove The AccessCode to be removed
 	 * @return void
 	 */
-	public function removeAccessCode(\Fab\QuickDemo\Domain\Model\AccessCode $accessCodeToRemove) {
+	public function removeAccessCode(\Fab\VidiDemo\Domain\Model\AccessCode $accessCodeToRemove) {
 		$this->accessCodes->detach($accessCodeToRemove);
 	}
 
 	/**
 	 * Returns the accessCodes
 	 *
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fab\QuickDemo\Domain\Model\AccessCode> $accessCodes
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fab\VidiDemo\Domain\Model\AccessCode> $accessCodes
 	 */
 	public function getAccessCodes() {
 		return $this->accessCodes;
@@ -222,7 +222,7 @@ class Book extends AbstractEntity {
 	/**
 	 * Sets the accessCodes
 	 *
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fab\QuickDemo\Domain\Model\AccessCode> $accessCodes
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fab\VidiDemo\Domain\Model\AccessCode> $accessCodes
 	 * @return void
 	 */
 	public function setAccessCodes(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $accessCodes) {
@@ -232,7 +232,7 @@ class Book extends AbstractEntity {
 	/**
 	 * Returns the files
 	 *
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fab\QuickDemo\Domain\Model\File> $files
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fab\VidiDemo\Domain\Model\File> $files
 	 */
 	public function getFiles() {
 		return $this->files;
@@ -241,7 +241,7 @@ class Book extends AbstractEntity {
 	/**
 	 * Sets the files
 	 *
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fab\QuickDemo\Domain\Model\File> $files
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Fab\VidiDemo\Domain\Model\File> $files
 	 * @return void
 	 * @see \TYPO3\CMS\Extbase\Domain\Model\FileReference
 	 */

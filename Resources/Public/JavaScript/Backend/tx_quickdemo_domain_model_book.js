@@ -5,7 +5,7 @@ $(document).ready(function () {
 	/**
 	 * Create relation action
 	 */
-	$(document).on('click', '.dataTable tbody .btn-tx_quickdemo_domain_model_book', function (e) {
+	$(document).on('click', '.dataTable tbody .btn-tx_vididemo_domain_model_book', function (e) {
 
 		var contentObjectUid = $(this).data('uid');
 

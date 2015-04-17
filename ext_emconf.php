@@ -21,12 +21,8 @@ $EM_CONF[$_EXTKEY] = array(
 	'version' => '1.0.0-dev',
 	'constraints' => array(
 		'depends' => array(
-			'vidi' => '',
-			'media' => '',
-			#'media_upload' => '',
-			#'quick_demo' => '',
-			#'messenger' => '',
 			'typo3' => '6.2.0-6.2.99',
+			'vidi' => '',
 		),
 		'conflicts' => array(
 		),
