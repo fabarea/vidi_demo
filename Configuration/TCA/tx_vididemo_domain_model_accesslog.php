@@ -100,7 +100,7 @@ return array(
 			),
 			'crdate' => array(
 				'visible' => TRUE,
-				'format' => 'datetime',
+				'format' => 'Fab\Vidi\Formatter\DateTime',
 			),
 			'device' => array(
 				'visible' => TRUE,

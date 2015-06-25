@@ -243,6 +243,7 @@ return array(
 		),
 	),
 	'grid' => array(
+		'excluded_fields' => 'files',
 		'columns' => array(
 			'__checkbox' => array(
 				'renderer' => new \Fab\Vidi\Grid\CheckBoxComponent(),
@@ -265,8 +266,8 @@ return array(
 			'access_codes' => array(
 				'visible' => TRUE,
 				'renderers' => array(
-					new Fab\Vidi\Grid\GenericRendererComponent('Fab\Vidi\Grid\RelationEditRenderer'),
-					new Fab\Vidi\Grid\GenericRendererComponent(
+					new Fab\Vidi\Grid\GenericColumn('Fab\Vidi\Grid\RelationEditRenderer'),
+					new Fab\Vidi\Grid\GenericColumn(
 						'Fab\Vidi\Grid\RelationCountRenderer',
 						array(
 							'labelSingular' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_accesscode.xlf:access_code',
