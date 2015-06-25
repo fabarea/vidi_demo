@@ -64,8 +64,8 @@ if (TYPO3_MODE === 'BE') {
 	// Loop around the data types and register them to be displayed within a BE module.
 	foreach ($dataTypes as $dataType) {
 
-		/** @var \TYPO3\CMS\Vidi\Module\ModuleLoader $moduleLoader */
-		$moduleLoader = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\CMS\Vidi\Module\ModuleLoader', $dataType);
+		/** @var \Fab\Vidi\Module\ModuleLoader $moduleLoader */
+		$moduleLoader = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Fab\Vidi\Module\ModuleLoader', $dataType);
 		$moduleLoader->setIcon(sprintf('EXT:vidi_demo/Resources/Public/Icons/%s.gif', $dataType))
 			->setModuleLanguageFile(sprintf('LLL:EXT:vidi_demo/Resources/Private/Language/%s.xlf', $dataType))
 			->addJavaScriptFiles(array(sprintf('EXT:vidi_demo/Resources/Public/JavaScript/Backend/%s.js', $dataType)))

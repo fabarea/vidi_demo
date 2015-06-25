@@ -245,7 +245,7 @@ return array(
 	'grid' => array(
 		'columns' => array(
 			'__checkbox' => array(
-				'renderer' => new \TYPO3\CMS\Vidi\Grid\CheckBoxComponent(),
+				'renderer' => new \Fab\Vidi\Grid\CheckBoxComponent(),
 			),
 			'uid' => array(
 				'visible' => FALSE,
@@ -260,14 +260,14 @@ return array(
 			),
 			'publisher' => array(
 				'visible' => TRUE,
-				'renderer' => 'TYPO3\CMS\Vidi\Grid\RelationRenderer',
+				'renderer' => 'Fab\Vidi\Grid\RelationRenderer',
 			),
 			'access_codes' => array(
 				'visible' => TRUE,
 				'renderers' => array(
-					new TYPO3\CMS\Vidi\Grid\GenericRendererComponent('TYPO3\CMS\Vidi\Grid\RelationEditRenderer'),
-					new TYPO3\CMS\Vidi\Grid\GenericRendererComponent(
-						'TYPO3\CMS\Vidi\Grid\RelationCountRenderer',
+					new Fab\Vidi\Grid\GenericRendererComponent('Fab\Vidi\Grid\RelationEditRenderer'),
+					new Fab\Vidi\Grid\GenericRendererComponent(
+						'Fab\Vidi\Grid\RelationCountRenderer',
 						array(
 							'labelSingular' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_accesscode.xlf:access_code',
 							'labelPlural' => 'LLL:EXT:vidi_demo/Resources/Private/Language/tx_vididemo_domain_model_book.xlf:access_codes',
@@ -278,7 +278,7 @@ return array(
 				),
 			),
 			'__buttons' => array(
-				'renderer' => new \TYPO3\CMS\Vidi\Grid\ButtonGroupComponent(),
+				'renderer' => new \Fab\Vidi\Grid\ButtonGroupComponent(),
 			),
 		),
 	),
